@@ -1,5 +1,6 @@
 package com.example.pagingnewskotlin.model
 
+import androidx.recyclerview.widget.DiffUtil
 import com.google.gson.annotations.SerializedName
 
 data class NewsBean(
@@ -38,7 +39,19 @@ data class ArticlesItem(
 	val url: String? = null,
 
 	@field:SerializedName("content")
-	val content: String? = null
+	val content: String? = null,
+
+	// untuk mengkalkulasi data yang lama sama data yang terbaru
+	var DIFF_CALLBACK: DiffUtil.ItemCallback<ArticlesItem> = object : DiffUtil.ItemCallback<ArticlesItem>() {
+		override fun areItemsTheSame(oldItem: ArticlesItem, newItem: ArticlesItem): Boolean {
+			return oldItem.title == newItem.title
+		}
+
+		override fun areContentsTheSame(oldItem: ArticlesItem, newItem: ArticlesItem): Boolean {
+			return oldItem == newItem
+		}
+
+	}
 )
 
 data class Source(
