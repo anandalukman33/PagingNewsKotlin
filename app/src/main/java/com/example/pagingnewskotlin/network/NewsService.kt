@@ -11,7 +11,7 @@ interface NewsService {
     fun getNews(
         @Query("q") keyword: String,
         @Query("apiKey") api: String,
-        @Query("page") page: Int,
+        @Query("page") page: Long,
         @Query("pageSize") pageSize: Int
 
     ): Flowable<NewsBean>
