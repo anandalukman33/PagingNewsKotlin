@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ResApi {
 
-    val baseUrl = ""
+    val baseUrl = "https://newsapi.org/v2/"
 
     fun restApi() : NewsService {
         // Step 1 configurasi interceptor
