@@ -21,6 +21,7 @@
 
             <ImageView
                     android:id="@+id/item_profile_img"
+                    android:src="@drawable/news"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_alignParentLeft="true"/>
@@ -37,7 +38,7 @@
                         android:id="@+id/item_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/black"
+                        android:textColor="#414141"
                         android:textSize="14sp"/>
 
                 <TextView
@@ -46,7 +47,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/item_title"
                         android:layout_marginTop="3dp"
-                        android:textColor="@color/black"
+                        android:textColor="#0087f9"
                         android:textSize="12dp"/>
 
 
@@ -91,6 +92,7 @@
                     android:id="@+id/img_likes"
                     android:layout_width="55dp"
                     android:layout_height="14dp"
+                    android:src="@drawable/icon_like"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"/>
 
@@ -103,7 +105,8 @@
                     android:layout_marginTop="-2dp"
                     android:layout_toRightOf="@+id/img_likes"
                     android:text="170"
-                    android:textColor="@color/teal_200"
+                    android:textStyle="bold"
+                    android:textColor="#fb347a"
                     android:textSize="12sp"/>
 
 
@@ -115,7 +118,8 @@
                     android:layout_marginLeft="22dp"
                     android:layout_marginTop="-2dp"
                     android:text="1.6K Comments"
-                    android:textColor="@color/teal_200"
+                    android:textColor="#3535fa"
+                    android:textStyle="bold"
                     android:textSize="12sp"/>
 
 
@@ -127,7 +131,8 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="-2dp"
                     android:text="50K Shares"
-                    android:textColor="@color/teal_200"
+                    android:textColor="#fc7100"
+                    android:textStyle="bold"
                     android:textSize="12sp"/>
 
 

@@ -16,7 +16,7 @@ class NewsData: PageKeyedDataSource<Long, ArticlesItem>() {
     }
 
     override fun loadInitial(params: LoadInitialParams<Long>, callback: LoadInitialCallback<Long, ArticlesItem>) {
-        api?.getNews("market", "d365302acf244531b773ab7075bf271d", 1, params.requestedLoadSize)
+        api?.getNews("", "d365302acf244531b773ab7075bf271d", 1, params.requestedLoadSize)
             ?.subscribeOn(Schedulers.io())
             ?.observeOn(AndroidSchedulers.mainThread())
             ?.subscribe({ t ->
@@ -29,7 +29,7 @@ class NewsData: PageKeyedDataSource<Long, ArticlesItem>() {
     }
 
     override fun loadAfter(params: LoadParams<Long>, callback: LoadCallback<Long, ArticlesItem>) {
-        api?.getNews("market", "d365302acf244531b773ab7075bf271d", params.key, params.requestedLoadSize)
+        api?.getNews("", "d365302acf244531b773ab7075bf271d", params.key, params.requestedLoadSize)
             ?.subscribeOn(Schedulers.io())
             ?.observeOn(AndroidSchedulers.mainThread())
             ?.subscribe({ t ->
